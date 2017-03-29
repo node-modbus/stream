@@ -4,8 +4,9 @@ This is a NodeJS v6 module to help you process modbus data. It uses [modbus-pdu]
 
 ### Roadmap
 
-- [x] Support basic reading function codes
-- [ ] Support basic writing function codes
+- [x] Support basic reading functions
+- [x] Support basic writing functions (single and multiple)
+- [x] Support exceptions
 - [x] Support TCP transport
 - [ ] Support serial transport
 
