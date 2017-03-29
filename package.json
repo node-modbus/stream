@@ -1,6 +1,6 @@
 {
 	"name"         : "modbus-stream",
-	"version"      : "0.1.0",
+	"version"      : "0.1.1",
 	"author"       : "Diogo Resende <dresende@thinkdigital.pt>",
 	"license"      : "MIT",
 	"keywords"     : [ "modbus", "serial", "rtu", "tcp", "stream" ],
