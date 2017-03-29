@@ -16,23 +16,15 @@ Writing functions should be fairly simple as they're already supported by the PD
 This is my current `test.js` file. It creates a client and a server network socket and the server requests coils as soon as the client connects.
 
 ```js
-var net    = require("net");
 var modbus = require("modbus-stream");
 
-var server = net.createServer((socket) => {
-    var stream = new modbus.Stream(new modbus.TCP(), socket, { debug: "server" });
-
-    stream.readCoils({ from: 3, to: 7 }, (err, info) => {
+modbus.tcp.server({ debug: "server" }, (connection) => {
+    connection.readCoils({ from: 3, to: 7 }, (err, info) => {
         console.log("response", info.response.data);
     });
-});
-
-server.listen(12345, () => {
-
-    var socket = net.connect(12345, () => {
-        var stream = new modbus.Stream(new modbus.TCP(), socket, { debug: "client" });
-
-        stream.events.on("read-coils", (package, reply) => {
+}).listen(12345, () => {
+    modbus.tcp.connect(12345, { debug: "client" }, (err, connection) => {
+        connection.events.on("read-coils", (package, reply) => {
             reply(null, [ 1, 0, 1, 0, 1, 1, 0, 1 ]);
         });
     });
