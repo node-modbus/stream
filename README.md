@@ -8,9 +8,7 @@ This is a NodeJS v6 module to help you process modbus data. It uses [modbus-pdu]
 - [x] Support basic writing functions (single and multiple)
 - [x] Support exceptions
 - [x] Support TCP transport
-- [ ] Support serial transport
-
-Writing functions should be fairly simple as they're already supported by the PDU module. The serial transport will rely on `serialport` but I haven't got the time needed.
+- [x] Support serial transport
 
 ### Example
 
