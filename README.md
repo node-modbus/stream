@@ -88,6 +88,7 @@ Every method accepts and object `options` which have defaults parameters (like `
 - `readDiscreteInputs` (`address = 0`, `quantity = 1`)
 - `readHoldingRegisters` (`address = 0`, `quantity = 1`)
 - `readInputRegisters` (`address = 0`, `quantity = 1`)
+- `readFifoQueue` (`address = 0`)
 - `writeSingleCoil` (`address = 0`, `value = 0`)
 - `writeSingleRegister` (`address = 0`, `value = <Buffer 0x00 0x00>`)
 - `writeMultipleCoils` (`address = 0`, `values = []`)
