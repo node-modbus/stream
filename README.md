@@ -84,20 +84,30 @@ modbus.serial.connect("/dev/ttyS123", { debug: "automaton-123" }, (err, connecti
 
 Every method accepts and object `options` which have defaults parameters (like `address = 0`) and a callback, in case you want to see the response from the remote device. Here is a list of supported function codes and the corresponding methods:
 
+**Base Reads**
+
 - `readCoils` (`address = 0`, `quantity = 1`)
 - `readDiscreteInputs` (`address = 0`, `quantity = 1`)
 - `readHoldingRegisters` (`address = 0`, `quantity = 1`)
 - `readInputRegisters` (`address = 0`, `quantity = 1`)
+
+**Base Writes**
 
 - `writeSingleCoil` (`address = 0`, `value = 0`)
 - `writeSingleRegister` (`address = 0`, `value = <Buffer 0x00 0x00>`)
 - `writeMultipleCoils` (`address = 0`, `values = []`)
 - `writeMultipleRegisters` (`address = 0`, `values = [ <Buffer 0x00 0x00> ]`)
 
+**File Records**
+
 - `readFileRecord` (`requests = []`)
 - `writeFileRecord` (`requests = []`)
 
+**FIFO**
+
 - `readFifoQueue` (`address = 0`)
+
+**Advanced**
 
 - `maskWriteRegister` (`address = 0`, `andmask = 0xFFFF`, `ormask = 0x0000`)
 
