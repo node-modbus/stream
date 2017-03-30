@@ -113,6 +113,7 @@ Every method accepts and object `options` which have defaults parameters (like `
 - `readDeviceIdentification` (`type = "BasicDeviceIdentification"`, `id = "ProductName"`)
 - `readExceptionStatus` ()
 - `getCommEventCounter` ()
+- `getCommEventLog` ()
 
 ### Responses
 
