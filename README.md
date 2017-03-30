@@ -110,6 +110,7 @@ Every method accepts and object `options` which have defaults parameters (like `
 **Advanced**
 
 - `maskWriteRegister` (`address = 0`, `andmask = 0xFFFF`, `ormask = 0x0000`)
+- `readDeviceIdentification` (`type = "BasicDeviceIdentification"`, `id = "ProductName"`)
 
 ### Responses
 
