@@ -12,7 +12,7 @@ This is a NodeJS v6 module to help you process modbus data. It uses [modbus-pdu]
 - [x] Support exceptions
 - [x] Support TCP transport
 - [x] Support RTU transport
-- [ ] Support ASCII transport
+- [x] Support ASCII transport
 
 ### Example
 
