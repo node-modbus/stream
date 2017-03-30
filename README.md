@@ -8,7 +8,8 @@ This is a NodeJS v6 module to help you process modbus data. It uses [modbus-pdu]
 - [x] Support basic writing functions (single and multiple)
 - [x] Support exceptions
 - [x] Support TCP transport
-- [x] Support serial transport
+- [x] Support RTU transport
+- [ ] Support ASCII transport
 
 ### Example
 
