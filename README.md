@@ -1,5 +1,8 @@
 ## Modbus Stream
 
+[![](https://badge.fury.io/js/modbus-stream.svg)](https://npmjs.org/package/modbus-stream)
+[![](https://gemnasium.com/dresende/node-modbus-stream.png)](https://gemnasium.com/dresende/node-modbus-stream)
+
 This is a NodeJS v6 module to help you process modbus data. It uses [modbus-pdu](https://github.com/dresende/node-modbus-pdu) to build the core PDU and then uses transports to extend the rest.
 
 ### Roadmap
