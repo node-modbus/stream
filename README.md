@@ -88,12 +88,17 @@ Every method accepts and object `options` which have defaults parameters (like `
 - `readDiscreteInputs` (`address = 0`, `quantity = 1`)
 - `readHoldingRegisters` (`address = 0`, `quantity = 1`)
 - `readInputRegisters` (`address = 0`, `quantity = 1`)
-- `readFifoQueue` (`address = 0`)
-- `readFileRecord` (`requests = []`)
+
 - `writeSingleCoil` (`address = 0`, `value = 0`)
 - `writeSingleRegister` (`address = 0`, `value = <Buffer 0x00 0x00>`)
 - `writeMultipleCoils` (`address = 0`, `values = []`)
 - `writeMultipleRegisters` (`address = 0`, `values = [ <Buffer 0x00 0x00> ]`)
+
+- `readFileRecord` (`requests = []`)
+- `writeFileRecord` (`requests = []`)
+
+- `readFifoQueue` (`address = 0`)
+
 - `maskWriteRegister` (`address = 0`, `andmask = 0xFFFF`, `ormask = 0x0000`)
 
 ### Responses
