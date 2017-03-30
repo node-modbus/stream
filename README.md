@@ -5,14 +5,18 @@
 
 This is a NodeJS v6 module to help you process modbus data. It uses [modbus-pdu](https://github.com/dresende/node-modbus-pdu) to build the core PDU and then uses transports to extend the rest.
 
-### Roadmap
+### Features
 
-- [x] Support basic reading functions
-- [x] Support basic writing functions (single and multiple)
-- [x] Support exceptions
-- [x] Support TCP transport
-- [x] Support RTU transport
-- [x] Support ASCII transport
+- [x] Support almost every standard function code
+- [x] Support standard exceptions
+- [x] Support transports
+    - [x] TCP
+    - [x] RTU
+    - [x] ASCII
+- [x] Support drivers
+    - [x] TCP
+    - [ ] UDP
+    - [x] Serial port (RS232, RS485)
 
 ### Example
 
