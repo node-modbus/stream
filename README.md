@@ -94,6 +94,7 @@ Every method accepts and object `options` which have defaults parameters (like `
 - `writeSingleRegister` (`address = 0`, `value = <Buffer 0x00 0x00>`)
 - `writeMultipleCoils` (`address = 0`, `values = []`)
 - `writeMultipleRegisters` (`address = 0`, `values = [ <Buffer 0x00 0x00> ]`)
+- `maskWriteRegister` (`address = 0`, `andmask = 0xFFFF`, `ormask = 0x0000`)
 
 ### Responses
 
