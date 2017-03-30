@@ -110,6 +110,7 @@ Every method accepts and object `options` which have defaults parameters (like `
 **Advanced**
 
 - `maskWriteRegister` (`address = 0`, `andmask = 0xFFFF`, `ormask = 0x0000`)
+- `readWriteMultipleRegisters` (`read_address = 0`, `read_quantity = 1`, `write_address = 0`, `values = [ <Buffer 0x00 0x00> ]`)
 - `readDeviceIdentification` (`type = "BasicDeviceIdentification"`, `id = "ProductName"`)
 - `readExceptionStatus` ()
 - `getCommEventCounter` ()
