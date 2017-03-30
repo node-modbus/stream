@@ -7,7 +7,7 @@
 	"keywords"     : [ "modbus", "serial", "rtu", "tcp", "stream" ],
 	"main"         : "lib/modbus",
 	"dependencies" : {
-		"modbus-pdu" : "1.1.0",
+		"modbus-pdu" : "1.2.0",
 		"serialport" : "4.0.7"
 	}
 }
