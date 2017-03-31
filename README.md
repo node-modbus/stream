@@ -1,6 +1,7 @@
 ## Modbus Stream
 
-[![](https://badge.fury.io/js/modbus-stream.svg)](https://npmjs.org/package/modbus-stream)
+[![Build Status](https://secure.travis-ci.org/dresende/node-modbus-stream.png?branch=master)](http://travis-ci.org/dresende/node-modbus-stream)
+[![Package Version](https://badge.fury.io/js/modbus-stream.svg)](https://npmjs.org/package/modbus-stream)
 [![Dependency Status](https://gemnasium.com/badges/github.com/dresende/node-modbus-stream.svg)](https://gemnasium.com/github.com/dresende/node-modbus-stream)
 
 
