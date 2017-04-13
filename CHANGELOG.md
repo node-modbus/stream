@@ -1,3 +1,10 @@
+## 0.11.0 - 13 Apr 2017
+
+- stream:
+  - adds close(next)
+- deps:
+  - modbus-pdu@1.7.0
+
 ## 0.10.0 - 13 Apr 2017
 
 - serial:
