@@ -1,3 +1,10 @@
+## 0.8.0 - 13 Apr 2017
+
+- node:
+  - updates code to work properly on 0.10
+- readme:
+  - removes v6 reference since now it should work from 0.10 onwards
+
 ## 0.7.0 - 13 Apr 2017
 
 - node:
