@@ -8,7 +8,7 @@
 	"main"         : "lib/modbus",
 	"scripts"      : { "test": "node test/run" },
 	"dependencies" : {
-		"modbus-pdu" : "1.5.0",
+		"modbus-pdu" : "1.5.1",
 		"serialport" : "4.0.7"
 	},
 	"devDependencies" : {
