@@ -1,3 +1,11 @@
+## 0.13.0 - 13 Apr 2017
+
+- transport:
+  - ascii:
+    - check slave id response match
+  - serial:
+    - check slave id response match
+
 ## 0.12.0 - 13 Apr 2017
 
 - transport:
