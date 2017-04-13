@@ -1,3 +1,8 @@
+## 0.12.0 - 13 Apr 2017
+
+- transport:
+  - changes beforewrite/afterwrite to beforerequest/afterrequest
+
 ## 0.11.0 - 13 Apr 2017
 
 - stream:
