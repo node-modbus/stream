@@ -1,3 +1,11 @@
+## 0.9.0 - 13 Apr 2017
+
+- transport:
+  - fixes static method prepare()
+  - fixes transport send using prototype.apply instead of prototype.call
+- stream:
+  - fixes typo of addres
+
 ## 0.8.0 - 13 Apr 2017
 
 - node:
