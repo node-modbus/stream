@@ -1,3 +1,15 @@
+## 0.7.0 - 13 Apr 2017
+
+- node:
+  - adds support for at least v0.10
+- transports:
+  - return an error (GatewayTargetDeviceFailedToRespond) after retries run out
+  - adds support for beforewrite and afterwrite
+  - tcp:
+    - adds default retry timeout to 30 seconds
+- deps:
+  - modbus-pdu@1.5.1
+
 ## 0.6.0 - 12 Apr 2017
 
 - modbus:
