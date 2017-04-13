@@ -1,3 +1,12 @@
+## 0.10.0 - 13 Apr 2017
+
+- serial:
+  - adds support for serialport from 1.7.1 and above
+- transport:
+  - only stop retry timer if transport unwrap returns ok
+  - serial:
+    - avoid errors when receiving data with less than 3 bytes
+
 ## 0.9.0 - 13 Apr 2017
 
 - transport:
