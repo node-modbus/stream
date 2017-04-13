@@ -1,4 +1,6 @@
-const Duplex = require("stream").Duplex;
+var util   = require("util");
+var buffer = require("../lib/buffer");
+var Duplex = require("stream").Duplex;
 
 exports.stream = function () {
 	return new EmptyStream;
@@ -8,65 +10,72 @@ exports.tests = function () {
 	return require("./tests");
 };
 
-exports.tcp_header = function (pdu, transactionId = 0, protocol = 0, unitId = 1) {
-	var buffer = Buffer.alloc(7);
+exports.tcp_header = function (pdu, transactionId, protocol, unitId) {
+	var header = buffer.alloc(7);
 
-	buffer.writeUInt16BE(transactionId, 0);
-	buffer.writeUInt16BE(protocol, 2);
-	buffer.writeUInt16BE(pdu.length + 1, 4);
-	buffer.writeUInt8(unitId, 6);
+	if (typeof transactionId == "undefined") transactionId = 0;
+	if (typeof protocol == "undefined")      protocol      = 0;
+	if (typeof unitId == "undefined")        unitId        = 1;
 
-	return buffer;
+	header.writeUInt16BE(transactionId, 0);
+	header.writeUInt16BE(protocol, 2);
+	header.writeUInt16BE(pdu.length + 1, 4);
+	header.writeUInt8(unitId, 6);
+
+	return header;
 };
 
-exports.serial_header = function (slaveId = 1) {
-	return Buffer.from([ slaveId ]);
+exports.serial_header = function (slaveId) {
+	if (typeof slaveId == "undefined") slaveId = 1;
+
+	return buffer.from([ slaveId ]);
 };
 
 exports.ascii_wrap = function (slaveId, pdu) {
-	var start  = Buffer.from([ 0x3A ]);
-	var end    = Buffer.from([ 0x0D, 0x0A ]);
-	var buffer = Buffer.alloc((pdu.length + 1) * 2 + 2 + start.length + end.length);
+	var start  = buffer.from([ 0x3A ]);
+	var end    = buffer.from([ 0x0D, 0x0A ]);
+	var header = buffer.alloc((pdu.length + 1) * 2 + 2 + start.length + end.length);
 
-	start.copy(buffer, 0);
-	end.copy(buffer, buffer.length - end.length);
+	start.copy(header, 0);
+	end.copy(header, header.length - end.length);
 
-	writeAscii(buffer, Buffer.from([ slaveId ]), start.length);
-	writeAscii(buffer, pdu, start.length + 2);
-	writeAscii(buffer, exports.modbus.transports.ascii.lrc(Buffer.concat([ Buffer.from([ slaveId ]), pdu ])), buffer.length - end.length - 2);
+	writeAscii(header, buffer.from([ slaveId ]), start.length);
+	writeAscii(header, pdu, start.length + 2);
+	writeAscii(header, exports.modbus.transports.ascii.lrc(Buffer.concat([ buffer.from([ slaveId ]), pdu ])), header.length - end.length - 2);
 
-	return buffer;
+	return header;
 };
 
-exports.print_buffer = function (buffer) {
-	return "<" + [ ... buffer.values() ].map((v) => ((v < 16 ? "0" : "") + v.toString(16))).join(" ") + ">";
+exports.print_buffer = function (buf) {
+	return "<" + buffer.values(buf).map(function (v) { return (v < 16 ? "0" : "") + v.toString(16); }).join(" ") + ">";
 };
 
 exports.modbus = require("../");
+exports.buffer = buffer;
 
-class EmptyStream extends Duplex {
-	constructor(options) {
-		super(options);
-	}
-
-	_write (chunk, encoding, callback) {
-		callback();
-	}
-
-	_read (size) {
-		this.push(Buffer.alloc(0));
-	}
+function EmptyStream(options) {
+	Duplex.call(this, options);
 }
 
-function writeAscii(buffer, block, offset) {
+util.inherits(EmptyStream, Duplex);
+
+EmptyStream.prototype._write = function (chunk, encoding, callback) {
+	callback();
+};
+
+EmptyStream.prototype._read = function (size) {
+	this.push(buffer.alloc(0));
+};
+
+function writeAscii(header, block, offset) {
 	for (var i = 0; i < block.length; i++) {
-		let char = block[i].toString(16).toUpperCase();
+		var char = block[i].toString(16).toUpperCase();
 
 		if (char.length < 2) {
 			char = "0" + char;
 		}
 
-		buffer.writeUInt8(char.charCodeAt(0), offset + (i * 2));
-		buffer.writeUInt8(char.charCodeAt(1), offset + (i * 2) + 1);
+		header.writeUInt8(char.charCodeAt(0), offset + (i * 2));
+		header.writeUInt8(char.charCodeAt(1), offset + (i * 2) + 1);
 	}
 }

@@ -4,7 +4,7 @@ var help   = require("../help");
 describe("transport serial", function () {
 	var transport = new help.modbus.transports.serial(help.stream());
 
-	help.tests().map((test) => {
+	help.tests().map(function (test) {
 		var package = Buffer.concat([
 			help.serial_header(test.slaveId),
 			test.pdu,
@@ -29,7 +29,7 @@ describe("transport serial", function () {
 				it("pdu = " + help.print_buffer(test.pdu), function () {
 					assert(data.pdu.length === test.pdu.length);
 
-					data.pdu.map((_, i) => {
+					help.buffer.values(data.pdu).map(function (_, i) {
 						assert(data.pdu[i] === test.pdu[i]);
 					});
 				});

@@ -9,8 +9,11 @@ var locations = [
 	path.normalize(path.join(__dirname, "..", "node_modules/modbus-pdu/test/integration")),
 ];
 
-locations.map((location) => {
-	fs.readdirSync(location).filter((file) => (file.substr(-3) == '.js')).map((file) => {
+locations.map(function (location) {
+	fs
+	.readdirSync(location)
+	.filter(function (file) { return file.substr(-3) == ".js"; })
+	.map(function (file) {
 		mocha.addFile(path.join(location, file));
 	});
 });

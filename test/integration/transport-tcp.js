@@ -4,7 +4,7 @@ var help   = require("../help");
 describe("transport tcp", function () {
 	var transport = new help.modbus.transports.tcp(help.stream());
 
-	help.tests().map((test) => {
+	help.tests().map(function (test) {
 		var package = Buffer.concat([
 			help.tcp_header(test.pdu, test.transactionId, test.protocol, test.unitId),
 			test.pdu
@@ -36,7 +36,7 @@ describe("transport tcp", function () {
 				it("pdu = " + help.print_buffer(test.pdu), function () {
 					assert(data.pdu.length === test.pdu.length);
 
-					data.pdu.map((_, i) => {
+					help.buffer.values(data.pdu).map(function (_, i) {
 						assert(data.pdu[i] === test.pdu[i]);
 					});
 				});

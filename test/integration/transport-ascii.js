@@ -1,10 +1,11 @@
 var assert = require("assert");
+var buffer = require("../../lib/buffer");
 var help   = require("../help");
 
 describe("transport ascii", function () {
 	var transport = new help.modbus.transports.ascii(help.stream());
 
-	help.tests().map((test) => {
+	help.tests().map(function (test) {
 		var package = help.ascii_wrap(test.slaveId, test.pdu);
 		var data    = transport.unwrap(package);
 
@@ -25,12 +26,12 @@ describe("transport ascii", function () {
 				it("pdu = " + help.print_buffer(test.pdu), function () {
 					assert(data.pdu.length === test.pdu.length);
 
-					data.pdu.map((_, i) => {
+					help.buffer.values(data.pdu).map(function (_, i) {
 						assert(data.pdu[i] === test.pdu[i]);
 					});
 				});
 
-				it("crc = " + help.print_buffer(Buffer.from([ data.crc ])), function () {
+				it("crc = " + help.print_buffer(buffer.from([ data.crc ])), function () {
 					assert(data.crc === data.expected_crc);
 				});
 			}
