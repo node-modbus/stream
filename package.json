@@ -9,7 +9,7 @@
 	"scripts"      : { "test": "node test/run" },
 	"dependencies" : {
 		"modbus-pdu" : "1.5.1",
-		"serialport" : "4.0.7"
+		"serialport" : ">=1.7.1"
 	},
 	"devDependencies" : {
 		"mocha"     : "3.2.0"
