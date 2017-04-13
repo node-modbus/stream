@@ -5,7 +5,7 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/dresende/node-modbus-stream.svg)](https://gemnasium.com/github.com/dresende/node-modbus-stream)
 
 
-This is a NodeJS v6 module to help you process modbus data. It uses [modbus-pdu](https://github.com/dresende/node-modbus-pdu) to build the core PDU and then uses transports to extend the rest.
+This is a NodeJS module to help you process modbus data. It uses [modbus-pdu](https://github.com/dresende/node-modbus-pdu) to build the core PDU and then uses transports to extend the rest.
 
 ### Features
 
