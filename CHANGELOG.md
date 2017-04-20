@@ -1,3 +1,8 @@
+## 0.14.0 - 20 Apr 2017
+
+- deps:
+  - modbus-pdu@1.8.0
+
 ## 0.13.0 - 13 Apr 2017
 
 - transport:
