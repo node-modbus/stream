@@ -1,3 +1,10 @@
+## 0.14.2 - 11 May 2017
+
+- stream:
+  - fixes typo in addres
+- deps:
+  - mocha@3.3.0
+
 ## 0.14.1 - 27 Apr 2017
 
 - deps:
