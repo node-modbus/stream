@@ -12,6 +12,6 @@
 		"serialport" : ">=1.7.1"
 	},
 	"devDependencies" : {
-		"mocha"     : "3.3.0"
+		"mocha"     : "3.4.2"
 	}
 }
