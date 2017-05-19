@@ -1,3 +1,9 @@
+## 0.14.3 - 19 May 2017
+
+- deps:
+  - mocha@3.4.2
+  - modbus-pdu@1.8.2
+
 ## 0.14.2 - 11 May 2017
 
 - stream:
