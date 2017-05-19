@@ -1,3 +1,8 @@
+## 0.14.4 - 19 May 2017
+
+- deps:
+  - mocha@3.4.1 (previous update was erroneous)
+
 ## 0.14.3 - 19 May 2017
 
 - deps:
