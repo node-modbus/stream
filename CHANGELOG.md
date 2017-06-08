@@ -1,3 +1,19 @@
+## 0.15.0 - 8 Jun 2017
+
+- transport:
+  - fixes timeout error returned not having a proper code
+  - tcp:
+    - return a proper code when not being able to connect to remote host/port
+  - serial:
+    - return a proper code when not being able to open port
+- stream:
+  - add iso date to debug lines
+- test:
+  - adds node v8
+- deps:
+  - modbus-pdu@1.8.3
+  - mocha@3.4.2
+
 ## 0.14.4 - 19 May 2017
 
 - deps:
