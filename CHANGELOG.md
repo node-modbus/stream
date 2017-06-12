@@ -1,3 +1,9 @@
+## 0.16.0 - 12 Jun 2017
+
+- transport:
+  - serial:
+    - adds support for data coming in parts (checking CRC match)
+
 ## 0.15.0 - 8 Jun 2017
 
 - transport:
