@@ -43,4 +43,19 @@ describe("transport tcp", function () {
 			}
 		});
 	});
+
+	it("should receive options from constructor helper", function (done) {
+		var port  = 65123;
+		var proto = 123;
+
+		help.modbus.tcp.server({ protocol: proto }, function (stream) {
+			assert(stream.transport.protocol === proto);
+
+			return done();
+		}).listen(port, function () {
+			help.modbus.tcp.connect(port, function (err, socket) {
+				socket.close();
+			});
+		});
+	});
 });
