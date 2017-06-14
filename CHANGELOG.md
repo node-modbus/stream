@@ -1,3 +1,11 @@
+## 0.17.0 - 14 Jun 2017
+
+- transport:
+  - tcp:
+    - fixes calling socket.close() instead of socket.end()
+- modbus:
+  - pass all options to tcp transport (fixes #3)
+
 ## 0.16.0 - 12 Jun 2017
 
 - transport:

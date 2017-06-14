@@ -1,6 +1,6 @@
 {
 	"name"         : "modbus-stream",
-	"version"      : "0.16.0",
+	"version"      : "0.17.0",
 	"author"       : "Diogo Resende <dresende@thinkdigital.pt>",
 	"repository"   : "https://github.com/dresende/node-modbus-stream",
 	"license"      : "MIT",
