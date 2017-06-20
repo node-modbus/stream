@@ -1,3 +1,10 @@
+## 0.18.0 - 20 Jun 2017
+
+- udp:
+  - initial support
+- test:
+  - adds node v5, disable node v8 for now, adds node_modules to cache
+
 ## 0.17.0 - 14 Jun 2017
 
 - transport:
