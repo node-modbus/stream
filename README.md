@@ -1,11 +1,11 @@
 ## Modbus Stream
 
-[![Build Status](https://secure.travis-ci.org/dresende/node-modbus-stream.png?branch=master)](http://travis-ci.org/dresende/node-modbus-stream)
+[![Build Status](https://secure.travis-ci.org/node-modbus/stream.png?branch=master)](http://travis-ci.org/node-modbus/stream)
 [![Package Version](https://badge.fury.io/js/modbus-stream.svg)](https://npmjs.org/package/modbus-stream)
-[![Dependency Status](https://gemnasium.com/badges/github.com/dresende/node-modbus-stream.svg)](https://gemnasium.com/github.com/dresende/node-modbus-stream)
+[![Dependency Status](https://gemnasium.com/badges/github.com/node-modbus/stream.svg)](https://gemnasium.com/github.com/node-modbus/stream)
 
 
-This is a NodeJS module to help you process modbus data. It uses [modbus-pdu](https://github.com/dresende/node-modbus-pdu) to build the core PDU and then uses transports to extend the rest.
+This is a NodeJS module to help you process modbus data. It uses [modbus-pdu](https://github.com/node-modbus/pdu) to build the core PDU and then uses transports to extend the rest.
 
 ### Features
 
