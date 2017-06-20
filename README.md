@@ -33,7 +33,7 @@ modbus.tcp.server({ debug: "server" }, (connection) => {
     });
 }).listen(12345, () => {
     modbus.tcp.connect(12345, { debug: "client" }, (err, connection) => {
-        connection.events.on("read-coils", (package, reply) => {
+        connection.on("read-coils", (package, reply) => {
             reply(null, [ 1, 0, 1, 0, 1, 1, 0, 1 ]);
         });
     });
