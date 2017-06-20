@@ -17,8 +17,8 @@ This is a NodeJS module to help you process modbus data. It uses [modbus-pdu](ht
     - [x] ASCII
 - [x] Support drivers
     - [x] TCP
-    - [ ] UDP
-    - [x] Serial port (RS232, RS485)
+    - [x] UDP
+    - [x] Serial (RS232, RS485)
 
 ### Example
 
