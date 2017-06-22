@@ -1,3 +1,13 @@
+## 0.19.0 - 22 Jun 2017
+
+- stream:
+  - adds option debuginvert to invert the arrows in incoming/outgoing debug lines
+  - adds option debugdate that when passed false will not print date in debug lines
+- transport:
+  - fixes replies with unknown function codes
+- deps:
+  - modbus-pdu@1.8.4
+
 ## 0.18.0 - 20 Jun 2017
 
 - udp:
