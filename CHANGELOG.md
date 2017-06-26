@@ -1,3 +1,9 @@
+## 0.21.0 - 26 Jun 2017
+
+- transport:
+  - tcp callback now matches transaction+unit+fcode
+  - fixes utf8 non visible whitespace
+
 ## 0.20.0 - 23 Jun 2017
 
 - deps:
