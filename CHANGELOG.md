@@ -1,3 +1,12 @@
+## 0.24.0 - 27 Jun 2017
+
+- tcp:
+  - ensure tcp properly splits packages that come together
+- test:
+  - adds quirk tests, fixes double callback invocation
+- deps:
+  - modbus-pdu@1.11.0
+
 ## 0.23.0 - 26 Jun 2017
 
 - transport:
