@@ -1,3 +1,9 @@
+## 0.25.0 - 30 Jun 2017
+
+- transport:
+  - propagate error event from stream (#4)
+  - store closed state and avoid send data to a closed stream (#4)
+
 ## 0.24.0 - 27 Jun 2017
 
 - tcp:
