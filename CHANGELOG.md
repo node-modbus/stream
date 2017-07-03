@@ -1,3 +1,10 @@
+## 0.26.0 - 3 Jul 2017
+
+- transport:
+  - exposes `close` event
+- readme:
+  - adds events section
+
 ## 0.25.0 - 30 Jun 2017
 
 - transport:
