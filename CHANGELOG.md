@@ -1,3 +1,8 @@
+## 0.27.0 - 3 Jul 2017
+
+- transport:
+  - adds support for a mutex
+
 ## 0.26.0 - 3 Jul 2017
 
 - transport:
