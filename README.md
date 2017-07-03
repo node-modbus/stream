@@ -149,3 +149,18 @@ modbus.serial.connect("/dev/ttyS123", {
     })
 });
 ```
+
+### Events
+
+There are events propagated from the transports up to the stream. You should bind some event listener
+just in case the connection or serial device errors or just closes. Remember that in NodeJS, an emitted
+error event without a listener will cause the process to throw an `uncaughtException`.
+
+#### Transport Closed (`close`)
+
+This event is emitted when the `serialport` module emits a `close` event or when a socket emits an
+`end` event.
+
+#### Transport Error (`error`)
+
+This event if something happens to the underlying stream, like a `ECONNRESET` or something similar.
