@@ -1,3 +1,9 @@
+## 0.32.0 - 4 Jul 2017
+
+- serial:
+  - allow option crc=false to be able to send raw data
+  - fixes dropping data with less than 4 bytes
+
 ## 0.31.0 - 4 Jul 2017
 
 - serial:
