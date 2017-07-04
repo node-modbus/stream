@@ -1,3 +1,8 @@
+## 0.30.0 - 4 Jul 2017
+
+- tcp:
+  - handle packages concatenated in one data event
+
 ## 0.29.0 - 4 Jul 2017
 
 - tcp:
