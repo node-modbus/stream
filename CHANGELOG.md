@@ -1,3 +1,10 @@
+## 0.33.0 - 4 Jul 2017
+
+- transport:
+  - pass options also to transport to be able to set options there
+- serial:
+  - adds maxDataInterval (in ms) between received data blocks
+
 ## 0.32.0 - 4 Jul 2017
 
 - serial:
