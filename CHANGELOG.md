@@ -1,3 +1,8 @@
+## 0.31.0 - 4 Jul 2017
+
+- serial:
+  - allow to pass lock option
+
 ## 0.30.0 - 4 Jul 2017
 
 - tcp:
