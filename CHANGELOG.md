@@ -1,3 +1,8 @@
+## 0.29.0 - 4 Jul 2017
+
+- tcp:
+  - fixes previous commit not properly handling exceptions as it should
+
 ## 0.28.0 - 4 Jul 2017
 
 - tcp:
