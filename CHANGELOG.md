@@ -1,3 +1,8 @@
+## 0.28.0 - 4 Jul 2017
+
+- tcp:
+  - fixes callbacks not working for exception responses
+
 ## 0.27.0 - 3 Jul 2017
 
 - transport:
