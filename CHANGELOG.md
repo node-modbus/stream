@@ -1,3 +1,9 @@
+## 0.34.0 - 6 Jul 2017
+
+- serial:
+  - allow to pass any option that you can use in serialport
+  - avoid clearing buffer if it's already cleared
+
 ## 0.33.0 - 4 Jul 2017
 
 - transport:
