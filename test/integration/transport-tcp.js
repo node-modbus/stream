@@ -5,13 +5,13 @@ describe("transport tcp", function () {
 	var transport = new help.modbus.transports.tcp(help.stream());
 
 	help.tests().map(function (test) {
-		var package = Buffer.concat([
+		var request = Buffer.concat([
 			help.tcp_header(test.pdu, test.transactionId, test.protocol, test.unitId),
 			test.pdu
 		]);
-		var data = transport.unwrap(package);
+		var data = transport.unwrap(request);
 
-		describe(test.name + " " + help.print_buffer(package), function () {
+		describe(test.name + " " + help.print_buffer(request), function () {
 			if (test.pass === false) {
 				it("not valid", function () {
 					assert(data === false);

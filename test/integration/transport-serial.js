@@ -5,14 +5,14 @@ describe("transport serial", function () {
 	var transport = new help.modbus.transports.serial(help.stream());
 
 	help.tests().map(function (test) {
-		var package = Buffer.concat([
+		var request = Buffer.concat([
 			help.serial_header(test.slaveId),
 			test.pdu,
 			test.crc
 		]);
-		var data = transport.unwrap(package);
+		var data = transport.unwrap(request);
 
-		describe(test.name + " " + help.print_buffer(package), function () {
+		describe(test.name + " " + help.print_buffer(request), function () {
 			if (test.pass === false) {
 				it("not valid", function () {
 					assert(data === false);
