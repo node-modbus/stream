@@ -1,3 +1,11 @@
+## 0.35.0 - 20 Jul 2017
+
+- transport:
+  - allow multiple retry timers, allowing tcp to requests to go simultaneously (#6)
+- test:
+  - change quirks to split each transport and avoid confusion
+  - avoids using reserved word `package` (fixes #5)
+
 ## 0.34.0 - 6 Jul 2017
 
 - serial:
