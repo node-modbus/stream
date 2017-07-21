@@ -1,3 +1,7 @@
+## 0.36.0 - 21 Jul 2017
+
+- tcp: fixes #7
+
 ## 0.35.0 - 20 Jul 2017
 
 - transport:
