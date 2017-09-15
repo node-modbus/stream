@@ -126,6 +126,9 @@ Every method accepts and object `options` which have defaults parameters (like `
 - `getCommEventCounter` ()
 - `getCommEventLog` ()
 
+For more information on these methods, look at the [pdu repository](https://github.com/node-modbus/pdu) which is used
+to build the packets.
+
 ### Responses
 
 To respond to remote requests, listen for events.
