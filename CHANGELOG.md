@@ -1,3 +1,13 @@
+## 0.37.0 - 15 Sep 2017
+
+- transport:
+  - serial:
+    - allow default slaveId to be passed in constructor
+  - tcp:
+    - allow default unitId to be passed in constructor (fixes #8)
+- deps:
+  - mocha@3.5.3
+
 ## 0.36.0 - 21 Jul 2017
 
 - tcp: fixes #7
