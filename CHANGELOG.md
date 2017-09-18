@@ -1,3 +1,10 @@
+## 0.38.0 - 19 Sep 2017
+
+- tcp:
+  - add a connection timeout option, `connectTimeout` (default=10s) (@jhillacre)
+- ci:
+  -  drop node 0.x, adds v8 (I still make efforts to it works on 0.x)
+
 ## 0.37.0 - 15 Sep 2017
 
 - transport:
