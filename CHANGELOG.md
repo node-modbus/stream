@@ -1,3 +1,8 @@
+## 0.39.0 - 27 Oct 2017
+
+- transport:
+  - expose `stream` in events
+
 ## 0.38.0 - 19 Sep 2017
 
 - tcp:
