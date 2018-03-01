@@ -1,3 +1,9 @@
+## 0.40.0 - 1 Mar 2018
+
+- transport:
+  - serial:
+    - adds 'mode' option to be able to select 'ascii' instead of the common serial (RTU)
+
 ## 0.39.0 - 27 Oct 2017
 
 - transport:
