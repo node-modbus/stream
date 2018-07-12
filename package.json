@@ -18,7 +18,6 @@
 	},
 	"dependencies": {
 		"modbus-pdu": "1.11.0",
-		"node-crc16": "^1.1.1",
 		"serialport": ">=1.7.1"
 	},
 	"devDependencies": {
