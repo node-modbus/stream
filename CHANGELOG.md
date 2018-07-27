@@ -1,3 +1,11 @@
+## 0.41.0 - 27 Jul 2018
+
+- transport:
+  - serial:
+    - fixes not being able to define slaveId (#20)
+- deps:
+  - mocha@5.2.0
+
 ## 0.40.1 - 9 May 2018
 
 - deps:
