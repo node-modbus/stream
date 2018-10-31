@@ -13,11 +13,11 @@
 	},
 	"dependencies" : {
 		"@types/node": "latest",
-		"modbus-pdu" : "1.11.1",
-		"serialport" : ">=1.7.1"
+		"modbus-pdu" : "^1.11.1",
+		"serialport" : ">=1.7.1 <7"
 	},
 	"devDependencies" : {
 		"dtslint"   : "^0.3.0",
-		"mocha"     : "5.2.0"
+		"mocha"     : "^5.2.0"
 	}
 }
