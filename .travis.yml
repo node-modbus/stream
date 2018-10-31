@@ -1,19 +1,19 @@
 language: node_js
 
 node_js:
-  - "4"
-  - "5"
   - "6"
   - "7"
   - "8"
 
 cache: npm
 
-jobs:
+matrix:
   include:
-    - script: npm test
-    - if: env(TRAVIS_NODE_VERSION) NOT IN (4, 5)
-      script: npm run dtslint
+    - node_js: "4"
+      env: RUN_DTS_LINT=false
+    - node_js: "5"
+      env: RUN_DTS_LINT=false
 
-
-
+script:
+  - npm test
+  - if [[ "$RUN_DTS_LINT" = true ]]; then npm run dtslint; fi
