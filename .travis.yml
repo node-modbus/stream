@@ -6,18 +6,13 @@ node_js:
   - "6"
   - "7"
   - "8"
-  - "9"
-  - "10"
-  - "11"
-  - "12"
-  - "lts/*"
-  - "node"
 
 cache: npm
 
 stages:
   - test
-  - dtslint
+  - name: dtslint
+    if: env(TRAVIS_NODE_VERSION) NOT IN(4, 5)
 
 jobs:
   include:
@@ -25,4 +20,4 @@ jobs:
       script: npm test
     - stage: dtslint
       script: npm run dtslint
-      if: NOT node_js IN(4, 5)
+
