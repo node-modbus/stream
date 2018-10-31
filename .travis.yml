@@ -10,10 +10,10 @@ cache: npm
 matrix:
   include:
     - node_js: "4"
-      env: RUN_DTS_LINT=false
+      env: SKIP_DTS_LINT=true
     - node_js: "5"
-      env: RUN_DTS_LINT=false
+      env: SKIP_DTS_LINT=true
 
 script:
   - npm test
-  - if [[ "$RUN_DTS_LINT" = true ]]; then npm run dtslint; fi
+  - if [[ "$SKIP_DTS_LINT" != true ]]; then npm run dtslint; fi
