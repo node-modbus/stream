@@ -1,13 +1,28 @@
 language: node_js
+
 node_js:
   - "4"
   - "5"
   - "6"
   - "7"
   - "8"
-cache:
-  directories:
-    - "node_modules"
-script:
-  - npm test
-  - npm run dtslint
+  - "9"
+  - "10"
+  - "11"
+  - "12"
+  - "lts/*"
+  - "node"
+
+cache: npm
+
+stages:
+  - test
+  - dtslint
+
+jobs:
+  include:
+    - stage: test
+      script: npm test
+    - stage: dtslint
+      script: npm run dtslint
+      if: NOT node_js IN(4, 5)
