@@ -6,12 +6,18 @@
 	"license"      : "MIT",
 	"keywords"     : [ "modbus", "serial", "rtu", "ascii", "tcp", "stream" ],
 	"main"         : "lib/modbus",
-	"scripts"      : { "test": "node test/run" },
+	"types"        : "types",
+	"scripts"      : {
+		"test"   : "node test/run",
+		"dtslint": "dtslint types"
+	},
 	"dependencies" : {
+		"@types/node": "latest",
 		"modbus-pdu" : "1.11.1",
 		"serialport" : ">=1.7.1"
 	},
 	"devDependencies" : {
+		"dtslint"   : "^0.3.0",
 		"mocha"     : "5.2.0"
 	}
 }
