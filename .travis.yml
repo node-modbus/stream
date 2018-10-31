@@ -9,15 +9,11 @@ node_js:
 
 cache: npm
 
-stages:
-  - test
-  - name: dtslint
-    if: env(TRAVIS_NODE_VERSION) NOT IN(4, 5)
-
 jobs:
   include:
-    - stage: test
-      script: npm test
-    - stage: dtslint
+    - script: npm test
+    - if: env(TRAVIS_NODE_VERSION) NOT IN (4, 5)
       script: npm run dtslint
+
+
 
