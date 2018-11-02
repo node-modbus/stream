@@ -1,3 +1,9 @@
+## 0.42.0 - 2 Nov 2018
+
+- adds TypeScript definitions
+- deps:
+  - modbus-pdu@1.12.0
+
 ## 0.41.0 - 27 Jul 2018
 
 - transport:
