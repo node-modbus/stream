@@ -10,7 +10,7 @@ declare module "modbus-stream" {
     }
 
     interface StreamOptions {
-        debug?: string;
+        debug?: string | null;
         debugdate?: boolean;
         debuginvert?: boolean;
     }
