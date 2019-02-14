@@ -1,3 +1,8 @@
+## 0.44.0 - 14 Feb 2019
+
+- deps:
+  - modbus-pdu@1.13.0
+
 ## 0.43.0 - 14 Feb 2019
 
 - changes example to show how to define `unitId`
