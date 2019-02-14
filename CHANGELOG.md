@@ -1,3 +1,11 @@
+## 0.43.0 - 14 Feb 2019
+
+- changes example to show how to define `unitId`
+- corrects contradiction in README example
+- disables debug
+- deps:
+  - dtslint@^0.4.2
+
 ## 0.42.0 - 2 Nov 2018
 
 - adds TypeScript definitions
