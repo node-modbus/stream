@@ -28,7 +28,7 @@ This is my current `test.js` file. It creates a client and a server network sock
 var modbus = require("modbus-stream");
 
 modbus.tcp.server({ debug: "server" }, (connection) => {
-    connection.readCoils({ from: 3, to: 7 }, (err, info) => {
+    connection.readCoils({ address: 5, quantity: 8 }, (err, info) => {
         console.log("response", info.response.data);
     });
 }).listen(12345, () => {
@@ -92,7 +92,7 @@ modbus.serial.connect("/dev/ttyS123", { debug: "automaton-123" }, (err, connecti
 });
 ```
 
-Every method accepts and object `options` which have defaults parameters (like `address = 0`) and a callback, in case you want to see the response from the remote device. Here is a list of supported function codes and the corresponding methods:
+Every method accepts an object `options` which have defaults parameters (like `address = 0`) and a callback, in case you want to see the response from the remote device. Here is a list of supported function codes and the corresponding methods:
 
 **Base Reads**
 
