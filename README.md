@@ -84,7 +84,7 @@ After having a connection, you can send requests and listen for responses.
 modbus.serial.connect("/dev/ttyS123", { debug: "automaton-123" }, (err, connection) => {
     if (err) throw err;
 
-    connection.readCoils({ address: 52, quantity: 8 }, (err, res) => {
+    connection.readCoils({ address: 52, quantity: 8, extra: { unitId: 25 } }, (err, res) => {
         if (err) throw err;
 
         console.log(res); // response
