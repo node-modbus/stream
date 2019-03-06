@@ -1,10 +1,19 @@
 language: node_js
+
 node_js:
-  - "4"
-  - "5"
   - "6"
   - "7"
   - "8"
-cache:
-  directories:
-    - "node_modules"
+
+cache: npm
+
+matrix:
+  include:
+    - node_js: "4"
+      env: SKIP_DTS_LINT=true
+    - node_js: "5"
+      env: SKIP_DTS_LINT=true
+
+script:
+  - npm test
+  - if [[ "$SKIP_DTS_LINT" != true ]]; then npm run dtslint; fi

@@ -1,3 +1,35 @@
+## 0.44.0 - 14 Feb 2019
+
+- deps:
+  - modbus-pdu@1.13.0
+
+## 0.43.0 - 14 Feb 2019
+
+- changes example to show how to define `unitId`
+- corrects contradiction in README example
+- disables debug
+- deps:
+  - dtslint@^0.4.2
+
+## 0.42.0 - 2 Nov 2018
+
+- adds TypeScript definitions
+- deps:
+  - modbus-pdu@1.12.0
+
+## 0.41.0 - 27 Jul 2018
+
+- transport:
+  - serial:
+    - fixes not being able to define slaveId (#20)
+- deps:
+  - mocha@5.2.0
+
+## 0.40.1 - 9 May 2018
+
+- deps:
+  - modbus-pdu@1.11.1
+
 ## 0.40.0 - 1 Mar 2018
 
 - transport:
