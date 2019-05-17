@@ -1,17 +1,23 @@
 {
 	"name"         : "modbus-stream",
-	"version"      : "0.40.0",
+	"version"      : "0.44.0",
 	"author"       : "Diogo Resende <dresende@thinkdigital.pt>",
 	"repository"   : "https://github.com/node-modbus/stream",
 	"license"      : "MIT",
 	"keywords"     : [ "modbus", "serial", "rtu", "ascii", "tcp", "stream" ],
 	"main"         : "lib/modbus",
-	"scripts"      : { "test": "node test/run" },
+	"types"        : "types",
+	"scripts"      : {
+		"test"   : "node test/run",
+		"dtslint": "dtslint types"
+	},
 	"dependencies" : {
-		"modbus-pdu" : "1.11.0",
-		"serialport" : ">=1.7.1"
+		"@types/node": "latest",
+		"modbus-pdu" : "^1.13.0",
+		"serialport" : ">=1.7.1 <7"
 	},
 	"devDependencies" : {
-		"mocha"     : "3.5.3"
+		"dtslint"   : "^0.4.2",
+		"mocha"     : "^5.2.0"
 	}
 }
