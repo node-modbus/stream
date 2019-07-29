@@ -1,18 +1,11 @@
 language: node_js
 
 node_js:
-  - "6"
-  - "7"
   - "8"
+  - "10"
+  - "12"
 
 cache: npm
-
-matrix:
-  include:
-    - node_js: "4"
-      env: SKIP_DTS_LINT=true
-    - node_js: "5"
-      env: SKIP_DTS_LINT=true
 
 script:
   - npm test
