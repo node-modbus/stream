@@ -1,3 +1,9 @@
+## 0.45.0 - 16 Feb 2021
+
+- changes serialport dependency to be an optional one
+- deps:
+  - mocha@6.2.0
+
 ## 0.44.0 - 14 Feb 2019
 
 - deps:
