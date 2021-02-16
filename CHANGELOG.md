@@ -1,3 +1,7 @@
+## 0.46.0 - 16 Feb 2021
+
+- changes serial driver to only load serialport when invoked
+
 ## 0.45.0 - 16 Feb 2021
 
 - changes serialport dependency to be an optional one
